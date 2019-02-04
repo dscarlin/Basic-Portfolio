@@ -3,23 +3,23 @@
 }
 body {
     background-image: url("../images/dust_scratches.png");
-    margin:auto;
     color: #777777;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 h1, h2 {
     font-family:'Georgia', Times, Times New Roman, serif;
+    color: #4aaaa5;
+    font-size: 22pt;
 }
 header {
     background-color: #ffffff;
-    margin: 0;
     border-bottom-style: groove;
     border-color: #cccccc;
     position: fixed;
-    position: fixed;
     top: 0;
     right: 0;
-    left: 0; 
+    left: 0;
+    z-index: 1;
 }
 .header-bar, section{
     background-color: #ffffff;
@@ -28,11 +28,15 @@ header {
 }
 section{
     border: 1px #dddddd solid;
+    border-style: inset;
     margin-top: 150px;
+    margin-bottom: 150px;
     padding: 20px;
+    overflow: auto;
+    font-size: 14pt;
+
 }
 h1 {
-    background-color: #4aaaa5;
     padding: 30px;
     margin: 0px;
     display: inline-block;
@@ -43,10 +47,12 @@ h1 {
 }
 a {
     margin: 10px;
-    display: inline;
     color: #777777;
     font-size:10pt;
-   
+    text-decoration:none
+}
+a:hover {
+    text-decoration: underline;
 }
 img {
     float: left;
@@ -61,36 +67,95 @@ footer {
     position: fixed;
     bottom: 0;
     right: 0;
-    left: 0; 
-    height: 30px;
+    left: 0;
+    height: 50px;
     justify-content: baseline;
     text-align: center;
+    border-top: 8px solid #4aaaa5
 }
 footer span{
     position: absolute;
     bottom: 0;
-    color: #777777;
+    color: #dddddd;
     font-size: 8pt;
-
 }
-.line {
-    background-color:#4aaaa5;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 35px 
+.fade {
+    color: #f5f5f5;
 }
 .reverse {
     background-color:#4aaaa5;
     color: #ffffff;
 }
 .banner {
-    width: 100%
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14pt;
 }
-input {
-    width: 100%
+input, textarea{
+    width: 100%;
+    margin: 5px 0px 20px 0px;
+    line-height: 150%;
+    font-size: 12pt;
+    padding-left: 10px;
+}
+textarea {
+    padding-right: 10px;
+    height: 200px;
+    display: flex
+}
+.block{
+   width: 280px;
+   height: 200px;
+   float: left;
+   margin: 20px;
+   position: relative;
+   box-shadow: 0 0 20px;
+    
+}
+.block:hover {
+    border-style: outset;
+    border: 3px solid;
+    border-color: #4aaaa5;
+    cursor: pointer;
+    box-shadow: 0 0 50px;
+
+    
 }
 #hangman{
-    background-image: url("../images/dave.JPG")
+    background-image: url("../images/dummy.JPG");
+    background-size: 100%
 }
+#rpg-game{
+    background-image: url("../images/dummy.JPG");
+    background-size: 100%
+}
+#trivia-game{
+    background-image: url("../images/dummy.JPG");
+    background-size: 100%
+}
+#info-widget{
+    background-image: url("../images/dummy.JPG");
+    background-size: 100%
+}
+#rock-paper-scissors{
+    background-image: url("../images/dummy.JPG");
+    background-size: 100%
+}
+hr {
+    border-bottom: 0px;
+    margin: 20px 0px;
+}
+
+button{
+    border: none;
+    padding: 10px 20px;
+    font-size: 12pt;
+}
+
+textarea{
+    -webkit-appearance: textfield;
+}
+
