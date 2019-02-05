@@ -125,23 +125,23 @@ textarea {
     
 }
 .hangman{
-    background-image: url("../images/dummy.JPG");
+    background-image: url("../images/dummy.jpg");
     background-size: 100%
 }
 .rpg-game{
-    background-image: url("../images/dummy.JPG");
+    background-image: url("../images/dummy.jpg");
     background-size: 100%
 }
 .trivia-game{
-    background-image: url("../images/dummy.JPG");
+    background-image: url("../images/dummy.jpg");
     background-size: 100%
 }
 .info-widget{
-    background-image: url("../images/dummy.JPG");
+    background-image: url("../images/dummy.jpg");
     background-size: 100%
 }
 .rock-paper-scissors{
-    background-image: url("../images/dummy.JPG");
+    background-image: url("../images/dummy.jpg");
     background-size: 100%
 }
 hr {
