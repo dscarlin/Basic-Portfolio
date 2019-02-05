@@ -33,6 +33,7 @@ section{
     margin-bottom: 150px;
     padding: 20px;
     font-size: 14pt;
+    overflow: auto;
 }
 h1 {
     padding: 30px;
@@ -99,10 +100,15 @@ input, textarea{
     font-size: 12pt;
     padding-left: 10px;
 }
+input::placeholder{
+    opacity: .6;
+}
 textarea {
     padding-right: 10px;
     height: 200px;
-    display: flex
+    /* display: flex */
+    resize:none;
+    
 }
 .block{
    width: 280px;

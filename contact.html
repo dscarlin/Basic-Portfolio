@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link rel="icon" type="image/png" href="assets/images/beard.png"/>
+    <script type="text/javascript"src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript"src="assets/js/autosize.min.js"></script>
+    
+    
+    
     
 </head>
 <body>
@@ -26,20 +31,40 @@
         <div>
             <h2>Contact</h2>
             <hr>
-            Name<input>
-            Email<input>
-            Message<textarea></textarea>
-            <button class="reverse">Submit</button>
+            
+            <form data-toggle="validator">
+            Name<input  type="text"  placeholder="Thomas Smith"  pattern="[A-Z]+[A-Za-z]* [A-Z]+[A-Za-z]*" required>  
+            Email<input type="email"  placeholder="example@email.com"  pattern="[A-Za-z0-9.]+@[A-Za-z0-9]+.[A-Za-z0-9]+" required>
+            Message<textarea maxlength="2000"></textarea>
+            <button  action="#" class="reverse" required>Submit</button>
+            <script>autosize(document.querySelectorAll('textarea'));</script>
+            </form> 
         </div>
+        <script>
+        /*David's Fix for not submitting form from enter in input field credit: some_other_guy stackoverflow*/
+        $('body').on('keydown', 'input', function(e) {
+            var self = $(this)
+            , form = self.parents('form:eq(0)')
+            , focusable
+            , next
+            ;
+            if (e.keyCode == 13) {
+                focusable = form.find('input,textarea,button').filter(':visible');
+                next = focusable.eq(focusable.index(this)+1);
+                if (next.length) {
+                    next.focus();
+                } else {
+                    form.submit();
+                }
+                return false;
+            }
+        });
+        </script>
     </section>
     <footer>
         <span>copyright©</span>
     </footer>
     
-      <script src="assets/js/autosize.min.js"></script>
-
-      <script>
-            autosize(document.querySelectorAll('textarea'));
-        </script>
+      
 </body>
 </html>
